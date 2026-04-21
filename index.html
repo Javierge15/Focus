@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Personal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/easymde/dist/easymde.min.css">
+
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAABrlSURBVHic7d190C5nXR/w7zkJISchMZFAkqPj8GZEpnBSBGlMoBAHQ2msFMVSB9o/mKm0IDLOgOPUVoa+OS3tlBFFHVt1aKtU1Dq2UGkIISG2KdJaUBB8IS1DAknQnARycvJ2+seeR548PC/3/Ty7+9vd6/OZuWYgkGeva/e67t/33t17NwEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIC9HaruQA8uTvKsJE9L8qQk35DkkiSPP92OpBvnBUX9A+blwSRfSvLZJJ9McmOS/5zk/1V2iqadk+SvJvnLSZ6Rru5dmuRUks+fbp9IckOS9yY5UdLLgR1O8heT/FCS30w36FOapmkDt4eT/LckLw6M56lJ3pnk3qw+V+9J8pNJnlzQ395dmuR1SX41yV2p/yDQNK3t9r50ZxthKGcn+WdJTmb/8/T+JP84yWNH7vuBnZ3kFem+5T+Q+gWvaZq2uX0xydWB/j0lyf9Of3P1o5lJYH1ukn+b5HjqF7imadpu7YEkrwn051iS29P/XP1ckr+wdWNTuQnwqiQ/nOTa6o4ArOGRJC9Ld7YSDuLyJNelu3l9CLcluTLJrRv/oDoAXJXkLUm+vbgfAPt1b5JvS/J71R1hto6lK/4XDbydjyV5Xrr7A3J44I3t5FiSm5PcFMUfmLfzkrwrdZ+nzNvlST6Q4Yt/0v1k/h9u/JexzwCcm+RNSX4kyVkjbxtgSK9O8u+qO8GsDH3afzsn0z1L4E/OGHGjr0z3MI3vTDLmdgHG8Ox0v9l+uLojzMJYp/23OjPdTwP/yxhnAC5Id2f/Xx9hWwCVvjvJr1V3gsmrKv4b7kty8dDfxL813dOzrhh4OwBTcCrdQ8tgJ2Ne89/JY5L87lA3rRxK8sZ0N/kt4nGEACvwcCB2U3HNfydXD3EJ4Ei6G2FePsDfBpi6r0v3m2vYrPq0/1Y39n0G4MIk74/iD7TrKdUdYHKmVvyT5NIze/xjlyT5r+kGCtCq86s7wKRMsfgnySV9BYCnJPmtJE/r6e8BzFX1E1aZjqkW/yQ51EcAuCzdzX5P7OFvAczd8eoOMAlTLv5JcvtB7wE4mu6bv+IP0PmT6g5QburFPzlgALgwXfF/Uj99AZi9O9O9zpV2TeF3/qv41H4DwJF0r7/8qvcLAzTs+nQPA6JNU/qd/16u308AOJTud/5X9twZgLn7leoOUOZYuiffzqH435/kvfsJAG+M3/kDbHVbuhee0Z65nPbf8O+T3LNuAPjWJD8+QGcA5u6fp3vVKm2Z02n/JHkw3VzNOgHgwiTvTnLWED0CmLFPJPmp6k4wurkV/yT5iSSfTtZ7YMWvJ3nZIN0BmK8vpbsn6mPVHWFUc/ip31a/n+5M/n3J6mcAvi+KP8BWp5K8Jop/a+Z2zT9J7kp3/959G/9glTMA5yf5gySXDtQpgDl6KMkPJPnp6o4wqjme9j+e5MVJPrL5H67yKOB/FMUfYLM/S/K96QoB7ZjTT/02HE9yTbYU/2TvMwCXJ/mdJGcM0CmAObouyWuT/HF1RxjVHK/5bxT/W7b7H3e7B+BQurtaFX+gdaeS3JjkpelOpSr+bVlc8U92vwTw0iRX9N0jgBm4N92DfT6R5EPpHn3uJT9tWmTxT3a/BPDbmV8AeCDdgD+c7sbFTyW5I8nd6X6q82Bd1wCYmcUW/928KN0przm0E+keUHRtknP2O2AA2ORYurc7Vte4ddrdSZ530IFfN4GB7NXuSvIP0j2hEAD60mzx/0sTGMhu7f4kb03yuIMOFAC2aLb4J8kvTGAwO7Ubk1zWxyABYIumi/+5Se6ZwIC2tkeSvD3JY/oYJABs0XTxT5JXTWBAW9uJeA8BAMNpvvgnyfsnMKitA3xBnwMEgE0U/yRH073conpgG+1EFH8AhqP4n/aGCQxsoz0cp/0BGI7iv8l/msDgNtpbhxggAETxf5Qz0r3esnqAp9I9d9sLiAAYguK/xXMmMMBT6R7y801DDRKApin+23jzBAZ5KslbhhwkAM1S/Hfw3gkM9M50DyICgD4p/ruYwo75+4OPEoDWKP67OFowuK3tvnirHwD9Uvz38JIRBrRX+6XBRwlASxT/Fbx+gEGs2146+CgBaIXiv6K39dDxg7QTSY4MPkoAWqD4r+E9++hsn+364YcIQAMU/zUcTvLEig1vcnPx9gGYv2NJrktyUXVH1nA8yTVJbqnY+OEkT6jY8CafLN4+APOm+O/T51N7+uM5ww8RgIVy2v8A7kntjjg6/BABWCDF/4DuT+3OOH/4IQKwMIp/Dx5J7Q7x6l8A1qH496R6pwDAqhT/HlXvGABYheLfs+qdAwB7UfwHUL2DAGA3iv9AqncSAOxE8R9Q9Y4CgO0o/gOr3lkAsJXiP4LqHQYAmyn+I6neaQCwQfEfUfWOA4BE8R9d9c4DAMW/QPUOBKBtin+R6p0IQLsU/0LVOxKANin+xap3JgDtUfwnoHqHAtAWxX8iqncqAO1Q/CekescC0AbFf2Kqdy4Ay6f4T1D1DgZg2RT/iareyQAsl+I/YdU7GoBlUvwnrnpnA7A8iv8MVO9wAJZF8Z+J6p0OwHIo/jNSveMBWAbFf2aqdz4A86f4z1D1AQBg3hT/mao+CADMl+I/Y9UHAoB5UvxnrvpgADA/iv8CVB8QAOZF8V+I6oMCwHwo/gtSfWAAmAfFf2GqDw4A06f4L1D1AQJg2hT/hao+SABMl+K/YNUHCoBpUvwXrvpgATA9in8Dqg8YANOi+Dei+qABMB2Kf0OqDxwA06D4N6b64AFQT/FvUPUBBKCW4t+o6oMIQB3Fv2HVBxKAGop/46oPJgDjU/wpP6AAjEvxJ0n9QQVgPIo/f676wAIwDsWfR6k+uAAMT/Hnq1QfYACGpfizreqDDMBwFH92VH2gARiG4s+uqg82AP1T/NlT9QEHoF+KPyupPugA9EfxZ2XVBx6Afij+rKX64ANwcIo/a6ueAAAcjOLPvlRPAgD2T/Fn36onAgD7o/hzINWTAYD1Kf4cWPWEAGA9ij+9qJ4UAKxO8ac31RMDgNUo/vSqenIAsDfFn95VTxAAdqf4M4jqSQLAzhR/BlM9UQDYnuLPoKonCwBfTfFncNUTBoBHU/wZRfWkAeArFH9GUz1xAOgo/oyqevIAoPhToHoCAbRO8adE9SQCaJniT5nqiQTQKsWfUtWTCaBFij+lzqzuAJz2NUmOJrk4yQVJ7khyW5Lbk5ws7BcM4fIk1yV5fHVH1nA8yTVJbqnuCP2pTpS064ok70jy6ew8Px5IcnOSNyf5+ppuQq8uT3JX6j97ffOnfGLRnu9I9y1i3bnyQJJfTPIN43cZeqH4MynVk4t2XJjk3Tn4nPlykh9Mcmjc7sOBKP5MTvUEow1PT/KZ9Dt33pPk7DEHAfuk+DNJ1ZOM5XtmhvvwuyHJ40YbCaxP8Weyqicay/Z1ST6XYefQjRECmCbFn0mrnmws1xnpvqGPMY+EAKZG8Wfyqiccy/V3M+5c+nCS80YZGezOQ36YhepJxzKdm5oPQGcCqOabP7NRPfFYptelbk4JAVRR/JmV6snHMn0ktfPK5QDG5rQ/s1M9AVmeo6mfV6fiTADj8c2fWaqehCzPK1I/r4QAxqL4M1vVE5HleXPq59Xm5nIAQ3Han1mrnowsz79K/bwSAhia4s/sVU9IluddqZ9X2zWXA+iL0/4sQvWkZHl+MvXzaqfmTAAH5Zs/i3C4ugMs0uerO7CLK5O8L0IA+3MsyXVJLqruyBqOJ7kmyS3VHWF6qpMpy/Oa1M+rvZrLAazLaX8Wp3qCsjzHUj+vVmkuB7Aqp/1ZpOpJyvIczvCvAO6rORPAXnzzZ7GqJyrL9LbUzy0hgINS/Fm06snKMj05yYOpn1+rNpcD2MppfxavesKyXD+T+vm1TnMmgA2++dOE6knLcl2U7ieB1XNMCGAdij/NqJ64LNt3JHko9fNMCGAVij9NqZ68LN/3p36erdvcE9Ae1/xpTvUEpg0/lPq5JgSwE8WfJlVPYtohBDBFij/Nqp7ItEUIYEoUf5pWPZlpjxDAFCj+NK96QtMmIYBKij+kflLTLiGACoo/nFY9sWmbEMCYFH/YpHpygxDAGBR/2KJ6gkMiBDAsxR+2UT3JYYMQwBAUf9hB9USHzYQA+qT4wy6qJztsJQTQB8Uf9lA94WE7QgAHofjDCqonPexECGA/FH9YUfXEh90IAaxD8Yc1VE9+2IsQwCoUf1hT9QKAVQgB7Ebxh32oXgSwKiGA7Sj+sE/VCwHWIQSwmeIPB1C9GGBdQgCJ4g8HVr0gYD+EgLYp/tCD6kUB+yUEtEnxh55ULww4CCGgLYo/9Kh6ccBBCQFtUPyhZ9ULBPogBCyb4g8DqF4k0BchYJkUfxhI9UKBPgkBy6L4k3Tr45VJfibJLUnuSHLidPtCkv+e5J1JXpHk3KI+zlL1YoG+CQHLoPhzWZKfS/LlrH4M7k3y00meUtDf2aleMDAEIWDeFP+2HUnytiQPZP/H42SSf5LkrJH7PivViwaGIgTMk+LftsuSfDz9HZubkjxx1BHMSPXCgSEJAfOi+Lft2emu7/d9jG5N8ozxhjEf1YsHhiYEzIPi37bLMkzx32ifSfKE0UYzE9ULCMYgBEyb4t+2s5P8bsZZU48daUyzUL2IYCxCwDQp/vzLjHfsfnSkMc1C9UKCMQkB06L48/QkD2a843c8LgX8uerFBGMTAqZB8SdJfj7jH8e3jzKyGaheUFBBCKil+JMk52e9h/z01Y4nOWeE8U1e9aKCKkJADcWfDa9K3TF9+Qjjm7zqhQWVhIBxKf5s9m9Sd1zfMcL4Jq96cUE1IWAcij9bfTR1x/amEcY3edULDKZACBiW4s92/jR1x/dzI4xv8qoXGUyFEDAMxZ+djPnzv63tSyOMb/KqFxpMiRDQL8WfnZyR2uP84PBDnL7qxQZTIwT0Q/FnNwLABFQvOJgiIeBgFH/2IgBMQPWig6kSAvZH8WcVAsAEVC88mDIhYD2KP6sSACagevHB1AkBq1H8WYcAMAHVCxDmQAjYneLPugSACahehDAXQsD2FH/2QwCYgOqFCHMiBDya4s9+CQATUL0YYW6EgI7iz0EIABNQvSBhjloPAYo/ByUATED1ooS5ajUEKP70QQCYgOqFCXPWWghQ/OmLADAB1YsT5q6VEKD40ycBYAKqFygswdJDgOJP3wSACahepLAUSw0Bij9DEAAmoHqhwpIsLQQo/gxFAJiA6sUKS7OUEKD4MyQBYAKqFyws0dxDgOLP0ASACahetLBUcw0BV0XxZ3gCwARUL1xYsjelfo0tvSn+8yQATED14oWlm+OZgLk0xX++BIAJqF7A0AIhoP+m+M+bADAB1YsYWiEE9NcU//kTACageiFDS4SAgzfFfxkEgAmoXszQGiFg/03xXw4BYAKqFzS0SAhYvyn+yyIATED1ooZWCQGrN8V/eQSACahe2NAyIWDvpvgvkwAwAdWLG1onBOzcFP/lEgAmoHqBA0LAdk3xXzYBYAKqFznQEQK+0hT/5RMAJqB6oQNfIQQo/q0QACagerEDj9ZyCFD82yEATED1gge+WoshQPFviwAwAdWLHtheSyFA8W+PADAB1Qsf2FkLIUDxb5MAMAHVix/Y3ZJDgOLfLgFgAqo/AIC9LTEEKP5tEwAmoPpDAFjNkkKA4o8AMAHVHwTA6pYQAhR/EgFgEqo/DID1zDkEKP5sEAAmoPoDAVjfHEOA4s9mAsAEVH8oAPszpxCg+LOVADAB1R8MwP7NIQQo/mxHAJiA6g8H4GCmHAIUf3YiAExA9QcEcHBTDAGKP7sRACag+kMC6MeUQoDiz14EgAmo/qAA+jOFEKD4swoBYAKqPyyAflWGAMWfVQkAEyAAwPJUhADFn3UIABMgAMAyjRkCFH/WJQBMgAAAyzVGCFD82Q8BYAIEAFi2IUOA4s9+CQATIADA8v29JA+n37V7e5JnjzkIFkUAmAABANrwkiR3pJ91+6EkXz9u91kYAWACBABoxxOT/FySh7K/9XpHktem+/CGgxAAJkAAgPY8Ncm/Tncaf5V1+pEkr09yTkVnWSQBoNih1BfhQ8Xbh5YdTvKsJFck+cYkFyU5M903/duT3JrkpiS3FfWP5Toj3ZmoKg8leUzh9ssJAABUEACKHa7uAAAwPgEAABokAABAgwQAAGiQAAAADRIAAKBBAgAANEgAAIAGCQAA0CABAAAaJAAAQIMEAABokAAAAA0SAACgQQIAADRIAACABgkAANAgAQAAGiQAAECDBAAAaJAAAAANEgAAoEECAAA0SAAAgAYJAADQIAEAABokAABAgwQAAGiQAAAADRIAAKBBAgAANEgAAIAGCQAA0CABAAAaJAAAQIMEAABokAAAAA0SAACgQQIAADRIAACABgkAANAgAQAAGiQAAECDBAAAaJAAAAANEgAAoEECAAA0SAAAgAYJAADQIAEAABokAABAgwQAAGiQAAAADRIAAKBBAgAANEgAAIAGCQAA0CABAAAaJAAAQIMEAABokAAAAA0SAACgQQIAADRIAACABgkAANAgAQAAGiQAAECDBAAAaJAAAAANEgAAoEECAAA0SAAAgAYJAADQIAEAABokAABAgwQAAGiQAAAADRIAAKBBAgAANEgAAIAGCQAA0CABAAAaJAAAQIMEAABokAAAAA0SAACgQQIAADRIAACABgkAANAgAQAAGiQAAECDBAAAaJAAAAANEgAAoEECAAA0SAAAgAYJAADQIAEAABokAABAgwQAAGiQAAAADRIAAKBBAgAANEgAAIAGCQAA0CABAAAaJAAAQIMEAABokAAAAA0SAACgQQIAADRIAACABgkAANAgAQAAGiQAAECDBAAAaJAAAAANEgAAoEECAAA0SAAAgAYJAADQoMNJThX34Yzi7QMwvurP/keKt1/ucJIHivtwbvH2ARjfecXbr6595aYQAB5XvH0AxlcdAE4Wb7/c4ST3Fffh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" alt="" />
+
+    <script src="https://unpkg.com/easymde/dist/easymde.min.js"></script>
+
+    <style>
+        :root { color-scheme: dark; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #0A0A0A; 
+            color: #E5E7EB;
+            overflow-x: hidden;
+        }
+        
+        .glow-1 {
+            position: fixed; top: -150px; right: -100px; width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(79, 70, 229, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
+            border-radius: 50%; z-index: -1; pointer-events: none; filter: blur(40px);
+        }
+        .glow-2 {
+            position: fixed; bottom: -200px; left: -150px; width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
+            border-radius: 50%; z-index: -1; pointer-events: none; filter: blur(50px);
+        }
+
+        .editor-toolbar { border: none; border-bottom: 1px solid rgba(255,255,255,0.05); opacity: 0.6; transition: opacity 0.2s; padding: 0 0 8px 0; }
+        .editor-toolbar:hover { opacity: 1; }
+        .editor-toolbar > button { color: #9CA3AF !important; }
+        .editor-toolbar > button.active, .editor-toolbar > button:hover { color: #F9FAFB !important; background: rgba(255,255,255,0.05) !important; border: none; }
+        .editor-toolbar > i.separator { border-left: 1px solid rgba(255,255,255,0.1) !important; border-right: none !important; }
+        
+        .CodeMirror { border: none !important; background-color: transparent !important; font-family: 'Inter', sans-serif; font-size: 16px; padding-left: 0; color: #D1D5DB !important; caret-color: #F9FAFB !important; }
+        .editor-statusbar { display: none; }
+        
+        .task-check { border-color: #4B5563; }
+        .task-item:hover .task-check { border-color: #E5E7EB; background-color: rgba(255,255,255,0.05); }
+        
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #374151; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #4B5563; }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col items-center pt-16 px-6 sm:px-8 selection:bg-indigo-500/30">
+
+    <div class="glow-1"></div>
+    <div class="glow-2"></div>
+
+    <div class="w-full max-w-2xl relative z-10" id="app-content" style="display: none;">
+        <header class="flex justify-between items-end mb-12 border-b border-white/5 pb-4">
+            <h1 class="text-xl font-medium tracking-tight text-white">Focus</h1>
+            <nav class="flex gap-6 text-sm font-medium text-gray-500">
+                <button type="button" onclick="switchTab('todo')" id="nav-todo" class="hover:text-white transition-colors text-white">TODO</button>
+                <button type="button" onclick="switchTab('diario')" id="nav-diario" class="hover:text-white transition-colors">DIARIO</button>
+            </nav>
+        </header>
+
+        <main id="view-todo" class="block">
+            <input type="text" id="task-input" placeholder="Nueva tarea... (Presiona Enter)"
+                class="w-full bg-transparent text-lg placeholder-gray-600 text-white focus:outline-none mb-8 pb-2 border-b border-transparent focus:border-white/20 transition-colors disabled:opacity-50">
+            
+            <ul id="task-list" class="space-y-4 text-gray-300">
+                <li class="text-sm text-gray-500 animate-pulse">Cargando tareas...</li>
+            </ul>
+        </main>
+
+        <main id="view-diario" class="hidden">
+            <div class="flex justify-between items-center mb-6">
+                <input type="date" id="diario-date" class="bg-transparent text-sm font-medium text-gray-400 hover:text-white focus:outline-none cursor-pointer transition-colors">
+                <span id="save-status" class="text-xs font-medium text-gray-500 transition-opacity opacity-0">Guardado</span>
+            </div>
+            <textarea id="markdown-editor"></textarea>
+            <p class="text-xs text-gray-500 mt-4 text-right">Presiona <kbd class="bg-white/10 px-1.5 py-0.5 rounded border border-white/10 text-gray-300">Cmd/Ctrl + S</kbd> para guardar.</p>
+        </main>
+    </div>
+
+    <script>
+        const API_URL = 'https://script.google.com/macros/s/AKfycbyAkm-dZ01V5Bv1_UM1Bj5Ql4rkaaocYpTEshoSM0BRkUk7bnEPJQhz5KYYSYr8N3e33A/exec';
+        
+        let easyMDE = null;
+        let currentTasks = [];
+        let userPin = localStorage.getItem('focus_pin');
+
+        // --- SISTEMA DE PIN ---
+        function checkSecurity() {
+            if (!userPin) {
+                userPin = prompt("Introduce tu PIN de seguridad");
+                if (userPin) {
+                    localStorage.setItem('focus_pin', userPin);
+                    loadTareas();
+                } else {
+                    document.body.innerHTML = '<div class="flex items-center justify-center min-h-screen text-gray-500">Acceso denegado. Recarga la página para intentarlo de nuevo.</div>';
+                }
+            } else {
+                document.getElementById('app-content').style.display = 'block';
+                loadTareas();
+            }
+        }
+
+        function switchTab(tab) {
+            document.getElementById('view-todo').style.display = tab === 'todo' ? 'block' : 'none';
+            document.getElementById('view-diario').style.display = tab === 'diario' ? 'block' : 'none';
+            
+            document.getElementById('nav-todo').classList.toggle('text-white', tab === 'todo');
+            document.getElementById('nav-todo').classList.toggle('text-gray-500', tab !== 'todo');
+            
+            document.getElementById('nav-diario').classList.toggle('text-white', tab === 'diario');
+            document.getElementById('nav-diario').classList.toggle('text-gray-500', tab !== 'diario');
+
+            if (tab === 'diario' && !easyMDE) initEditor();
+        }
+
+        async function loadTareas() {
+            try {
+                const res = await fetch(`${API_URL}?action=getTareas&pin=${userPin}`);
+                const data = await res.json();
+                
+                if (data.status === 'success') {
+                    currentTasks = data.data;
+                    renderTareas();
+                    // Si los datos bajan bien, mostramos la app
+                    document.getElementById('app-content').style.display = 'block'; 
+                } else {
+                    // SI EL PIN ES MALO, BORRAMOS Y PEDIMOS DE NUEVO
+                    alert("PIN Incorrecto. Acceso denegado.");
+                    localStorage.removeItem('focus_pin');
+                    location.reload(); 
+                }
+            } catch (error) {
+                document.getElementById('task-list').innerHTML = '<li class="text-red-400 text-sm">Error de conexión.</li>';
+            }
+        }
+
+        function renderTareas() {
+            const list = document.getElementById('task-list');
+            list.innerHTML = '';
+            if (currentTasks.length === 0) {
+                list.innerHTML = '<li class="text-sm text-gray-600">Nada pendiente. Zen absoluto.</li>';
+                return;
+            }
+            currentTasks.forEach(t => {
+                const li = document.createElement('li');
+                li.className = 'task-item flex items-center gap-4 group cursor-pointer';
+                li.innerHTML = `
+                    <div class="task-check w-4 h-4 rounded-full border flex-shrink-0 transition-all duration-200"></div>
+                    <span class="text-[17px] tracking-tight group-hover:text-white transition-colors">${t.tarea}</span>
+                `;
+                li.onclick = () => completeTarea(t.id, li);
+                list.appendChild(li);
+            });
+        }
+
+        document.getElementById('task-input').addEventListener('keypress', async (e) => {
+            if (e.key === 'Enter' && e.target.value.trim() !== '') {
+                const input = e.target;
+                const tarea = input.value.trim();
+                
+                input.disabled = true; // Bloquea duplicados
+                input.value = ''; 
+                input.placeholder = 'Guardando...';
+                
+                try {
+                    const res = await fetch(API_URL, {
+                        method: 'POST',
+                        // Adjuntamos el PIN en el Body
+                        body: JSON.stringify({ action: 'addTarea', tarea: tarea, pin: userPin }),
+                        headers: { 'Content-Type': 'text/plain;charset=utf-8' }
+                    });
+                    const data = await res.json();
+                    if (data.status === 'success') {
+                        currentTasks.push({ id: data.id, tarea: tarea, estado: 'Pendiente' });
+                        renderTareas();
+                    } else {
+                        handleAuthError(data);
+                    }
+                } catch (error) {
+                    console.error("Error al guardar", error);
+                }
+                
+                input.disabled = false;
+                input.placeholder = 'Nueva tarea... (Presiona Enter)';
+                input.focus();
+            }
+        });
+
+        async function completeTarea(id, element) {
+            element.style.opacity = '0.3';
+            element.style.textDecoration = 'line-through';
+            element.style.pointerEvents = 'none';
+            element.querySelector('.task-check').style.backgroundColor = '#E5E7EB';
+            
+            try {
+                const res = await fetch(API_URL, {
+                    method: 'POST',
+                    body: JSON.stringify({ action: 'completeTarea', id: id, pin: userPin }),
+                    headers: { 'Content-Type': 'text/plain;charset=utf-8' }
+                });
+                const data = await res.json();
+                
+                if (data.status === 'success') {
+                    currentTasks = currentTasks.filter(t => t.id !== id);
+                    setTimeout(renderTareas, 300);
+                } else {
+                    handleAuthError(data);
+                    renderTareas();
+                }
+            } catch (error) {
+                console.error("Error al completar", error);
+                renderTareas();
+            }
+        }
+
+        function initEditor() {
+            easyMDE = new EasyMDE({ 
+                element: document.getElementById('markdown-editor'),
+                spellChecker: false,
+                status: false,
+                autofocus: true,
+                placeholder: "Escribe aquí...",
+                toolbar: ["bold", "italic", "heading", "|", "quote", "unordered-list", "|", "link"],
+            });
+
+            const dateInput = document.getElementById('diario-date');
+            const today = new Date().toISOString().split('T')[0];
+            dateInput.value = today;
+            
+            loadDiario(today);
+
+            dateInput.addEventListener('change', (e) => loadDiario(e.target.value));
+
+            easyMDE.codemirror.on("keydown", function(cm, event) {
+                if ((event.ctrlKey || event.metaKey) && event.key === 's') {
+                    event.preventDefault();
+                    saveDiario();
+                }
+            });
+        }
+
+        async function loadDiario(fecha) {
+            easyMDE.value("Cargando entrada...");
+            try {
+                const res = await fetch(`${API_URL}?action=getDiario&fecha=${fecha}&pin=${userPin}`);
+                const data = await res.json();
+                if (data.status === 'success') {
+                    easyMDE.value(data.data || '');
+                } else {
+                    handleAuthError(data);
+                }
+            } catch (error) {
+                easyMDE.value("");
+            }
+        }
+
+        async function saveDiario() {
+            const statusSpan = document.getElementById('save-status');
+            statusSpan.textContent = 'Guardando...';
+            statusSpan.style.opacity = '1';
+
+            const fecha = document.getElementById('diario-date').value;
+            const contenido = easyMDE.value();
+
+            try {
+                const res = await fetch(API_URL, {
+                    method: 'POST',
+                    body: JSON.stringify({ action: 'saveDiario', fecha: fecha, contenido: contenido, pin: userPin }),
+                    headers: { 'Content-Type': 'text/plain;charset=utf-8' }
+                });
+                const data = await res.json();
+                
+                if (data.status === 'success') {
+                    statusSpan.textContent = 'Guardado ✓';
+                } else {
+                    statusSpan.textContent = 'Error de PIN';
+                    handleAuthError(data);
+                }
+                setTimeout(() => { statusSpan.style.opacity = '0'; }, 2000);
+            } catch (error) {
+                statusSpan.textContent = 'Error al guardar';
+            }
+        }
+
+        // Si el PIN está mal, borramos memoria y recargamos
+        function handleAuthError(data) {
+            if (data.status === 'error' && data.message === 'Acceso denegado') {
+                alert("El PIN es incorrecto o ha caducado.");
+                localStorage.removeItem('focus_pin');
+                window.location.reload();
+            }
+        }
+
+        // Arrancamos la app comprobando la seguridad
+        checkSecurity();
+    </script>
+</body>
+</html>

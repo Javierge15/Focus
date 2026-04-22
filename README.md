@@ -1,6 +1,5 @@
-# Focus - Sistema Personal
-
-Dashboard minimalista de productividad.
+# Focus
+App personal para gestionar tareas y llevar un registro laboral diario.
 
 ## Funcionalidades
 - **TODO:** Gestión de tareas pendientes en tiempo real.
@@ -12,3 +11,5 @@ Dashboard minimalista de productividad.
 
 ## Configuración
 La aplicación se conecta a un Google Sheet privado. Para que funcione, la `API_URL` en `index.html` debe apuntar al despliegue de Apps Script correspondiente.
+
+[![HTML](https://img.shields.io/badge/HTML-%23E34F26.svg?logo=html5&logoColor=white)](#)
